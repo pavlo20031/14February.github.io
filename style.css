@@ -1,0 +1,110 @@
+/* Загальні стилі */
+body {
+    background-color: #ffdde1;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    margin-top: 50px;
+    color: #ff4081;
+}
+
+h1 {
+    font-size: 3em;
+    color: #d63384;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.message {
+    font-size: 1.5em;
+    color: #ff4081;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #ff4081;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #d63384;
+}
+
+/* Анімація квітів */
+.flowers {
+    position: relative;
+    height: 200px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.flower {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('flower1.jpg');
+    background-size: cover;
+    opacity: 0;
+    animation: bloom 3s forwards;
+}
+
+@keyframes bloom {
+    0% { 
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% { 
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+    100% { 
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Фото квітів в кутах */
+.flower-images {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: -1;
+}
+
+.flower-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.top-left {
+    transform: rotate(-10deg);
+}
+
+.top-right {
+    transform: rotate(10deg);
+}
+
+.bottom-left {
+    transform: rotate(-10deg);
+}
+
+.bottom-right {
+    transform: rotate(10deg);
+}
